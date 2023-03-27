@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 
@@ -24,13 +25,39 @@ const Reference = () => {
       items: 1,
     },
   };
+
+  const handleLeft = () => {
+    document.querySelector('.reference-carousel .react-multiple-carousel__arrow--left').click()
+  }
+  const handleRight = () => {
+    document.querySelector('.reference-carousel .react-multiple-carousel__arrow--right').click()
+  }
   return (
-    <Carousel arrows responsive={responsive} showDots={true} infinite>
-      <Referenceitem imgUrl="/assets/reference/ref1.png" link="#" />
-      <Referenceitem imgUrl="/assets/reference/ref2.png" link="#" />
-      <Referenceitem imgUrl="/assets/reference/ref3.png" link="#" />
-      <Referenceitem imgUrl="/assets/reference/ref4.png" link="#" />
-    </Carousel>
+    <div className="relative">
+      <Carousel className="reference-carousel" itemClass="px-[8px]" arrows responsive={responsive} showDots={true} infinite partialVisible={false}>
+        <Referenceitem imgUrl="/assets/reference/ref1.png" link={`/referencie/1`} />
+        <Referenceitem imgUrl="/assets/reference/ref2.png" link={`/referencie/2`} />
+        <Referenceitem imgUrl="/assets/reference/ref3.png" link={`/referencie/3`} />
+        <Referenceitem imgUrl="/assets/reference/ref4.png" link={`/referencie/4`} />
+      </Carousel>
+      <div onClick={handleLeft} className="w-[36px] h-[36px] bg-primary-gold absolute top-[130px] left-[-8px] flex items-center justify-center cursor-pointer">
+        <Image 
+          src="/assets/black_arrow.svg"
+          alt="arrow"
+          width={20}
+          height={20}
+        />
+      </div>
+      <div onClick={handleRight} className="w-[36px] h-[36px] bg-primary-gold absolute top-[130px] right-[-8px] flex items-center justify-center cursor-pointer">
+      <Image 
+          src="/assets/black_arrow.svg"
+          alt="arrow"
+          width={20}
+          height={20}
+          className="rotate-180"
+        />
+      </div>
+    </div>
   );
 };
 
