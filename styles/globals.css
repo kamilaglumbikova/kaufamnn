@@ -8,3 +8,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+.top-carousel .react-multi-carousel-dot-list,
+.reference-carousel .react-multi-carousel-dot-list,
+.reference-carousel .react-multiple-carousel__arrow--right,
+.reference-carousel .react-multiple-carousel__arrow--left {
+  display: none;
+} 
