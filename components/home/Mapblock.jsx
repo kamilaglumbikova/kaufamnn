@@ -37,7 +37,7 @@ const Mapblock = () => {
   };
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCaNKWL1hHF7wzb2nRju8JN4byMjoLkq0M",
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   });
   return (
     <div className="bg-primary-gold">
