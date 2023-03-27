@@ -14,7 +14,13 @@ const Referenceitem = ({imgUrl, link}) => {
             POZRIEŤ PROJEKT
           </Link>
         </div>
-        <Image src={imgUrl} alt="reference" width={296} height={296} />
+        <Image 
+          src={imgUrl} 
+          alt="reference" 
+          width={296} 
+          height={296} 
+          className="w-full"
+        />
       </div>
   )
 }
