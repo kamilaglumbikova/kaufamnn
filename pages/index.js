@@ -48,7 +48,7 @@ export default function Home() {
           <Itemslider title="Stavebníctvo" imgUrl="/assets/home/home3.png" />
           <Itemslider title="Kov" imgUrl="/assets/home/home4.png" />
         </Carousel>
-        <div className="grid md:grid-cols-4 grid-cols-1 lg:px-[104px] px-[24px] py-[96px] gap-[16px] md:gap-0">
+        <div className="grid md:grid-cols-4 grid-cols-1 lg:px-[104px] px-[24px] py-[48px] md:py-[96px] gap-[16px] md:gap-0">
           <Itembenefit
             imgUrl="/assets/home/benefit1.svg"
             title="On Demand Pricing"

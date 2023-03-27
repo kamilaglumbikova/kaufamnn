@@ -7,12 +7,12 @@ export default function Kontakt() {
   return (
     <div className="border-t border-[#26272D]">
       <div className="max-w-[1440px] mx-auto">
-        <div className="lg:pl-[104px] lg-pr-[72px] px-[24px] pt-[48px] pb-[96px]">
+        <div className="lg:px-[104px] px-[24px] pt-[48px] md:pb-[96px] pb-[48px]">
           <Pagetitle title="KONTAKT" subtitle="Kontakty" />
           <p className="mt-[32px]">
             Máte na nás nejakú otázku? Tak nás neváhajte kontaktovať
           </p>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-x-[16px] mt-[32px]">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-[16px] mt-[32px]">
             <Info
               icon="/assets/contact/briefcase.svg"
               title="ÚDAJE FIRMY"
@@ -33,7 +33,7 @@ export default function Kontakt() {
               subtitle2="PO-PIA 8:00-16:00"
             />
           </div>
-          <div className="bg-[#26272D] p-[32px] mt-[32px]">
+          <div className="bg-[#26272D] p-[32px] mt-[32px] mx-[-24px] md:mx-0">
             <Pagetitle title="" subtitle="Vedenie" />
             <div className="grid md:grid-cols-2 grid-cols-1 gap-[16px] mt-[32px]">
               <Contactitem

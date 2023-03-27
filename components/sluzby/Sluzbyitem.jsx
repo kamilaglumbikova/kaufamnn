@@ -4,8 +4,8 @@ import React from "react";
 
 const Sluzbyitem = ({ item }) => {
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="w-full md:max-w-[296px]">
+    <div className="flex flex-col xl:flex-row">
+      <div className="w-full xl:max-w-[296px]">
         <Image loading="eager" className="w-full" src={item.imgUrl} alt={item.title} width={296} height={254} />
       </div>
       <div className="bg-[#26272D] p-[16px] flex-1 flex flex-col gap-[16px]">

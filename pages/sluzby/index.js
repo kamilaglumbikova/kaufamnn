@@ -35,7 +35,7 @@ export default function Sluzby() {
     <>
       <div className="border-t border-[#26272D]">
         <div className="max-w-[1440px] mx-auto">
-          <div className="lg:pl-[104px] lg-pr-[72px] px-[24px] pt-[48px] pb-[96px]">
+          <div className="lg:px-[104px] px-[24px] pt-[48px] pb-[96px]">
             <Pagetitle title="SLUŽBY" subtitle="Naša práca, naše hobby" />
             <div className="mt-[32px] max-w-[504px]">
               Naša spoločnosť sa zameriava na remeselné práce v oblasti

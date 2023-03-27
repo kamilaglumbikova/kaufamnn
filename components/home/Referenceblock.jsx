@@ -22,7 +22,7 @@ const Referenceblock = ({title, subtitle=""}) => {
             <div className="flex justify-center">
               <Link
                 href='/referencie'
-                className="border border-primary-gold h-[48px] px-[32px] uppercase mt-[32px] items-center justify-center flex md:inline-flex"
+                className="border border-primary-gold h-[48px] px-[32px] uppercase mt-[32px] items-center justify-center flex md:inline-flex w-full md:w-auto"
               >
                 VŠETKY REFERENCIE
               </Link>

@@ -24,9 +24,9 @@ const ReferenceDetail = () => {
   return (
     <div className="border-t border-[#26272D]">
       <div className="max-w-[1440px] mx-auto">
-        <div className="lg:pl-[104px] lg-pr-[72px] px-[24px] pt-[48px] pb-[96px]">
+        <div className="lg:pl-[104px] lg-pr-[72px] px-[24px] pt-[48px] md:pb-[96px] pb-[0]">
           <Pagetitle title="REFERENCIE" subtitle={item.title} />
-          <div className="grid md:grid-cols-4 grid-cols-1 gap-[16px] mt-[96px]">
+          <div className="grid md:grid-cols-4 grid-cols-1 gap-[16px] mt-[48px] md:mt-[96px]">
             <Info
               icon="/assets/reference/hammer.svg"
               title="Realizovali sme"
@@ -48,12 +48,12 @@ const ReferenceDetail = () => {
               subtitle="Stiahnúť"
             />
           </div>
-          <div className="mt-[96px]">Images</div>
-          <div className="bg-[#26272D] p-[32px] mt-[96px]">
+          <div className="mt-[48px] md:mt-[96px]">Images</div>
+          <div className="bg-[#26272D] p-[32px] mt-[48px] md:mt-[96px] mx-[-24px] md:mx-0">
             <div className="font-playfair text-[32px] leading-[42.66px] font-medium">
               Popis zakázky
             </div>
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-x-[16px] gap-y-[32px] mt-[32px]">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-x-[16px] gap-y-[32px] mt-[32px] ">
               <p>
                 Sagittis tellus aenean venenatis ante faucibus risus non semper.
                 In egestas neque nulla et egestas sed eget. Sem pretium vitae

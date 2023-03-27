@@ -3,7 +3,7 @@ import React from 'react'
 
 const Info = ({icon, title, subtitle, link=""}) => {
   return (
-    <div className="flex border border-[#26272D] w-[296px] h-[108px] items-center gap-[12px] px-[32px]">
+    <div className="flex border border-[#26272D] w-full md:w-[296px] h-[76px] md:h-[108px] items-center gap-[12px] px-[32px]">
         <Image
         alt={title}
         src={icon}
