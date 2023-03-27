@@ -17,7 +17,7 @@ const Navbarmobile = ({ navLinks, handleNav }) => {
         className="w-[24px] h-[24px]" 
         />
       </div>
-      <div className="flex flex-col text-[18px] font-semibold gap-[32px] px-[16px] pt-[48px] pb-[32px]">
+      <div className="flex flex-col text-[18px] font-medium gap-[32px] px-[16px] pt-[48px] pb-[32px]">
         {navLinks.map((nav, index) => (
           <span key={index} className={router.pathname == nav.path ? "text-primary-gold" : "hover:text-primary-gold"}>
             <Link href={nav.path}>{nav.name}</Link>

@@ -3,8 +3,8 @@ import React from 'react'
 
 const Contactitem = ({urlImg, position,name,language,phone,email}) => {
   return (
-    <div className="flex bg-[#18191E] gap-[16px] p-[32px]">
-        <div>
+    <div className="flex flex-col md:flex-row bg-[#18191E] gap-[16px] p-[32px]">
+        <div className="flex-100">
             <Image 
                 src={urlImg}
                 height={100}
@@ -14,7 +14,7 @@ const Contactitem = ({urlImg, position,name,language,phone,email}) => {
         </div>
         <div>
             <span className="text-primary-gold uppercase">{position}</span>
-            <div className="flex gap-[16px] items-center">
+            <div className="flex flex-col md:flex-row gap-[8px] md:gap-[16px] md:items-center">
                 <span className="font-playfair text-[20px] leading-[26.66px] font-medium">{name}</span>
                 <span className="flex gap-[4px]">
                     {language.map((lang, index) => (

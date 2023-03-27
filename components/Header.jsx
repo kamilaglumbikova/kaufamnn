@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Languageswitcher from "./Languageswitcher";
 import Navbar from "./Navbar";
 import Navbarmobile from "./Navbarmobile";
@@ -28,25 +28,44 @@ const Header = () => {
       path: "/kontakt",
     },
   ];
-
+  const [width, setWidth] = useState(0);
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
   return (
     <div className="max-w-[1440px] mx-auto font-rubik h-[56px] md:h-[100px]">
       <div className="lg:px-[104px] px-[24px] w-full mx-auto h-[56px] md:h-[100px] flex items-center justify-between">
         <div className="flex-1">
-          <Image          
-            src="/assets/logo-black.png"
+          <div className="w-[185px] h-[40px] md:w-[150px] md:h-[45px] lg:w-[220px] lg:h-[64px] relative">
+          <Image
+            src={
+              width > 767 ? "/assets/logo-black.png" : "/assets/logo-white.png"
+            }
             alt="Kaufmann Bau"
-            width={220}
-            height={64}
-            className="w-[185px] h-[40px] md:w-[220px] md:h-[64px]"
+            fill
           />
+          </div>
         </div>
         <div onClick={handleNav} className="block md:hidden cursor-pointer">
-          <img src="/assets/menu.svg" alt="menu" className="w-[24px] h-[24px]" />
+          <img
+            src="/assets/menu.svg"
+            alt="menu"
+            className="w-[24px] h-[24px]"
+          />
         </div>
         <div
           className={
@@ -58,11 +77,11 @@ const Header = () => {
           <div
             className={
               nav
-                ? "fixed right-0 top-0 w-[85%] h-screen bg-[#ffffff] p-4 ease-in duration-500 overflow-y-auto"
-                : "fixed right-[-100%] top-0 p-4 ease-in duration-500 bg-[#ecf0f3] h-full"
+                ? "fixed right-0 top-0 w-[85%] h-screen bg-[#ffffff] p-4 ease-in duration-500 overflow-y-auto z-30"
+                : "fixed right-[-100%] top-0 p-4 ease-in duration-500 bg-[#ecf0f3] h-full z-30"
             }
           >
-            <Navbarmobile  navLinks={navLinks} handleNav={handleNav} />
+            <Navbarmobile navLinks={navLinks} handleNav={handleNav} />
           </div>
         </div>
         <div className="hidden md:block flex-2">

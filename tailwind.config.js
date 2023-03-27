@@ -15,6 +15,9 @@ module.exports = {
         'primary-black': '#18191E',
         'primary-gold': '#BB945E'
       },
+      flex: {
+        '100': '0 0 100px'
+      }
     },
   },
   plugins: [],

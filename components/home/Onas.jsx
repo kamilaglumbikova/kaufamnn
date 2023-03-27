@@ -7,7 +7,7 @@ import Benefit from "./Benefit";
 const Onas = () => {
   return (
     <div className="flex gap-[16px] lg:px-[104px] px-[24px] flex-col md:flex-row md:pb-[96px]">
-      <div className="flex-1 bg-[#26272D] p-[48px]">
+      <div className="flex-1 md:bg-[#26272D] py-[48px] px-[24px] md:p-[48px]">
         <div className="flex gap-[8px] items-center">
           <span className="bg-primary-gold h-[2px] w-[64px]" />
           <span className="text-primary-gold uppercase">O nás</span>
