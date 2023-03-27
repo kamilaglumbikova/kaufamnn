@@ -1,4 +1,5 @@
 import { Rubik,Playfair_Display } from '@next/font/google';
+
 import Head from 'next/head'
 import '@/styles/globals.css'
 
@@ -9,11 +10,13 @@ const rubik = Rubik({
   variable: "--rubik-font",
   weight: ['400','500'],
   subsets: ['latin'],
+  display: 'swap'
 });
 const playfair = Playfair_Display({
   variable: "--playfair-font",
   weight: ['400','500'],
   subsets: ['latin'],
+  display: 'swap'
 });
 
 
